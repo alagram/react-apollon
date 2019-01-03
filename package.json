@@ -2,6 +2,11 @@
   "name": "react-apollon",
   "version": "0.1.0",
   "private": true,
+  "jest": {
+    "moduleNameMapper": {
+      "^.+\\.(css)$": "<rootDir>/config/CSSStub.js"
+    }
+  },
   "dependencies": {
     "apollo-cache-inmemory": "^1.3.11",
     "apollo-client": "^2.4.7",
@@ -35,6 +40,8 @@
   ],
   "devDependencies": {
     "babel-eslint": "10.0.1",
+    "enzyme": "3.8.0",
+    "enzyme-adapter-react-16": "1.7.1",
     "eslint": "5.10.0",
     "eslint-plugin-jest": "22.1.2",
     "eslint-plugin-react": "7.11.1",
