@@ -1,11 +1,11 @@
-import React from "react";
-import "./style.css";
+import React from 'react';
+import './style.css';
 
 const Button = ({
   children,
   className,
-  color = "black",
-  type = "button",
+  color = 'black',
+  type = 'button',
   ...props
 }) => (
   <button
