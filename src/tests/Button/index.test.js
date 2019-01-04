@@ -3,8 +3,17 @@ import { shallow } from 'enzyme';
 import Button from '../../Button';
 
 describe('Button', () => {
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(<Button />);
+  });
+
   it('renders a <button>', () => {
-    const wrapper = shallow(<Button />);
     expect(wrapper.type()).toBe('button');
+  });
+
+  it('renders correctly', () => {
+    expect(wrapper).toMatchSnapshot();
   });
 });
