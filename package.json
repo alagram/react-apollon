@@ -11,6 +11,7 @@
     "apollo-link-retry": "^2.2.8",
     "graphql": "^14.0.2",
     "graphql-tag": "^2.10.0",
+    "prop-types": "15.6.2",
     "react": "^16.6.3",
     "react-apollo": "^2.3.3",
     "react-dom": "^16.6.3",
@@ -19,8 +20,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "jest",
+    "eject": "react-scripts eject",
+    "lint": "eslint .",
+    "format": "prettier-eslint"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,5 +33,13 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "enzyme": "3.8.0",
+    "enzyme-adapter-react-16": "1.7.1",
+    "enzyme-to-json": "3.3.5",
+    "eslint-plugin-jest": "22.1.2",
+    "eslint-plugin-react": "7.11.1",
+    "prettier-eslint-cli": "4.7.1"
+  }
 }
