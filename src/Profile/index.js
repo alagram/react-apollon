@@ -1,9 +1,9 @@
-import React from "react";
-import gql from "graphql-tag";
-import { Query } from "react-apollo";
-import RepositoryList from "../Repository";
-import Loading from "../Loading";
-import ErrorMessage from "../Error";
+import React from 'react';
+import gql from 'graphql-tag';
+import { Query } from 'react-apollo';
+import RepositoryList from '../Repository';
+import Loading from '../Loading';
+import ErrorMessage from '../Error';
 
 const GET_REPOSITORIES_OF_CURRENT_USER = gql`
   {
