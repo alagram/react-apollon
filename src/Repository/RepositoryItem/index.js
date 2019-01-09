@@ -1,42 +1,13 @@
 import React from 'react';
-import gql from 'graphql-tag';
 import { Mutation } from 'react-apollo';
 import Link from '../../Link';
 import Button from '../../Button';
 import '../style.css';
-
-const STAR_REPOSITORY = gql`
-  mutation($id: ID!) {
-    addStar(input: { starrableId: $id }) {
-      starrable {
-        id
-        viewerHasStarred
-      }
-    }
-  }
-`;
-
-const UNSTAR_REPOSITORY = gql`
-  mutation($id: ID!) {
-    removeStar(input: { starrableId: $id }) {
-      starrable {
-        id
-        viewerHasStarred
-      }
-    }
-  }
-`;
-
-const WATCH_REPOSITORY = gql`
-  mutation($id: ID!, $viewerSubscription: SubscriptionState!) {
-    updateSubscription(input: { subscribableId: $id, state: state: $viewerSubscription }) {
-      subscribable {
-        id
-        viewerSubscription
-      }
-    }
-  }
-`;
+import {
+  STAR_REPOSITORY,
+  UNSTAR_REPOSITORY,
+  WATCH_REPOSITORY,
+} from '../mutations';
 
 const VIEWER_SUBSCRIPTIONS = {
   SUBSCRIBED: 'SUBSCRIBED',
@@ -44,7 +15,7 @@ const VIEWER_SUBSCRIPTIONS = {
 };
 
 const isWatch = viewerSubscription =>
-  viewerSubscription === VIEWER_SUBSCRIPTION.SUBSCRIBED;
+  viewerSubscription === VIEWER_SUBSCRIPTIONS.SUBSCRIBED;
 
 const RepositoryItem = ({
   id,
