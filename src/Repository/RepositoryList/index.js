@@ -1,6 +1,6 @@
-import React from "react";
-import RepositoryItem from "../RepositoryItem";
-import "../style.css";
+import React from 'react';
+import RepositoryItem from '../RepositoryItem';
+import '../style.css';
 
 const RepositoryList = ({ repositories }) =>
   repositories.edges.map(({ node }) => (
